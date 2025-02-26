@@ -1,6 +1,6 @@
 # Tools
 
-[Microsoft VSScode](https://code.visualstudio.com/) or whaever IDE you like
+[Microsoft VScode](https://code.visualstudio.com/) or whaever IDE you like
 
 [Terraform](https://www.terraform.io/)
 
