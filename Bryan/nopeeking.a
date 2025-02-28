@@ -1,1 +1,4 @@
-alias echo=$( /bin/echo "try again" )
+
+function echo {
+    /bin/echo "try again"
+}
