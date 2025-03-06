@@ -1,11 +1,12 @@
 #!/bin/bash
 
+cmd_echo=/usr/bin/echo
 . ./nopeeking.a
 
 # hello world function
 say_hello() {
   local name="$1"
-  echo Hello, ${name}!
+  ${cmd_echo} Hello, ${name}!
 }
 
 ### calling the function 
