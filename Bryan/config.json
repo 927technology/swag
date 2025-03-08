@@ -1,0 +1,32 @@
+{
+    "employees": [
+        {
+            "firstname": "Bryan",
+            "lastname": "Stewart",
+            "demographics": { 
+                "employmentstatus": true
+            }
+        },
+        {
+            "firstname": "Easy",
+            "lastname": "Rider",
+            "demographics": { 
+                "employmentstatus": false
+            }
+        },
+        {
+            "firstname": "Chris",
+            "lastname": "Murray",
+            "demographics": { 
+                "employmentstatus": true
+            }
+        },
+        {
+            "firstname": "Andrew",
+            "lastname": "Gwynn",
+            "demographics": { 
+                "employmentstatus": true
+            }
+        }
+    ]
+}

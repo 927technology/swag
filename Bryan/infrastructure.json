@@ -1,0 +1,885 @@
+{
+  "configuration"                   : {
+    "version"                       : "0.1.0",
+    "schema"                        : 1
+  },
+  "hosts"                           : {
+    "clouds"                        : [
+      {
+        "_note"                     : "Tenancy - cmurray(oci)",
+        "enable"                    : true,
+        "name"                      : "cmurray",
+        "iac"                       : [
+          {
+            "_note"                 : "Tenancy - chmurray(oci)",
+            "cloud"                 : {
+              "provider"            : "oci",
+              "config"              : "ops-ms"
+            }
+          }
+        ],
+        "ops"                       : [
+          {
+            "enable"                : true,
+            "event_handler"         : {
+              "enable"              : true,
+              "name"                : null
+            },
+            "icon"                  : {
+              "coordinates"             : {
+                "2d"                    : {
+                  "x"                   : null,
+                  "y"                   : null
+                },
+                "3d"                    : {
+                  "x"                   : null,
+                  "y"                   : null,
+                  "z"                   : null
+                }
+              },
+              "file"                    : {
+                "alternate"             : null,
+                "image"                 : null,
+                "vrml"                  : null
+              }
+            },
+            "name"                  : {
+              "display"             : "Tenancy - cmurray",
+              "string"              : "cloud-oci_cmurray"
+            },
+            "parents"               : [
+              {
+                "enable"            : false,
+                "name"              : "test"
+              },
+              {
+                "enable"            : false,
+                "name"              : "test2"
+              }
+            ],
+            "use"                   : "template-host_cloud"
+          }
+        ],
+        "tennants"                  : [
+          {
+            "_note"                 : "Tennant - cmurray/927",
+            "enable"                : true,
+            "iac"                   : [
+              {
+                "compartments"        : [
+                  {
+                    "note": "/927",
+                    "depth": 1,
+                    "description": "Root compartment for 927 tennant",
+                    "enable": true,
+                    "enable_delete": false,
+                    "name": "927",
+                    "label": "927-root",
+                    "parent": {
+                      "label": "root",
+                      "foreign": {
+                        "enable": false,
+                        "et": null,
+                        "flock": null,
+                        "phase": null,
+                        "project": null
+                      }
+                    },
+                    "prefix": [],
+                    "suffix": [],
+                    "tags": {
+                      "defined": {},
+                      "freeform": {}
+                    },
+                    "telemetry_alarms": []
+                  },
+                  {
+                    "note": "/927/network",
+                    "depth": 1,
+                    "description": "Network Compartment for 927 tennant",
+                    "enable": true,
+                    "enable_delete": false,
+                    "name": "927",
+                    "label": "927-network",
+                    "parent": {
+                      "label": "927-root",
+                      "foreign": {
+                        "enable": false,
+                        "et": null,
+                        "flock": null,
+                        "phase": null,
+                        "project": null
+                      }
+                    },
+                    "prefix": [],
+                    "suffix": [],
+                    "tags": {
+                      "defined": {},
+                      "freeform": {}
+                    },
+                    "telemetry_alarms": []
+                  }
+                ],
+                "drgs"                : [
+                  {
+                    "_note"           : "example",
+                    "attachments"     : [
+                      {
+                        "_note"       : "example",
+                        "resource"    : {
+                          "foreign"   : false,
+                          "label"     : "example",
+                          "type"      : "vcn"
+                        },
+                        "enable"      : false,
+                        "name"        : "example",
+                        "tags"        : {
+                          "defined"   : {},
+                          "freeform"  : {}
+                        }
+                      }
+                    ],
+                    "compartment"     : {
+                      "foreign"       : false,
+                      "label"         : "example"
+                    },
+                    "enable"          : false,
+                    "label"           : "example",
+                    "name"            : "example",
+                    "prefix"          : [],
+                    "suffix"          : [],
+                    "tags"            : {
+                      "defined"       : {},
+                      "freeform"      : {}
+                    }
+                  }
+                ]
+              }
+            ],
+            "name"                  : "cmurray/927",
+            "ops"                       : [
+              {
+                "enable"                : true,
+                "event_handler"         : {
+                  "enable"              : true,
+                  "name"                : null
+                },
+                "icon"                  : {
+                  "coordinates"             : {
+                    "2d"                    : {
+                      "x"                   : null,
+                      "y"                   : null
+                    },
+                    "3d"                    : {
+                      "x"                   : null,
+                      "y"                   : null,
+                      "z"                   : null
+                    }
+                  },
+                  "file"                    : {
+                    "alternate"             : null,
+                    "image"                 : null,
+                    "vrml"                  : null
+                  }
+                },
+                "name"                  : {
+                  "display"             : "Tenant - cmurray/927",
+                  "string"              : "tenant-cmurray_927"
+                },
+                "parents"               : [
+                  {
+                    "enable"            : "true",
+                    "name"              : "cloud-oci_cmurray"
+                  }
+                ],
+                "use"                   : "template-host_cloud"
+              }
+            ],
+            "provider"              : "oci",
+            "resources"             : [
+              {
+                "_note"             : "Compartment - cmurray/927",
+                "enable"            : true,
+                "iac"               : [
+                  {
+                    "configuration"           : {
+                      "_note"                 : "/927",
+                      "depth"                 : 1,
+                      "description"           : "927 Tennant",
+                      "enable"                : true,
+                      "enable_delete"         : false,
+                      "name"                  : "927 Tennant Root",
+                      "label"                 : "927_tennant-root",
+                      "parent"                : {
+                        "label"               : "root",
+                        "foreign"             : {
+                          "enable"            : false,
+                          "et"                : null,
+                          "flock"             : null,
+                          "phase"             : null,
+                          "project"           : null
+                        }
+                      },
+                      "prefix"                : [],
+                      "suffix"                : [
+                                                  "cmp"
+                      ],
+                      "tags"                  : {
+                        "defined"             : {},
+                        "freeform"            : {}
+                      },
+                      "telemetry_alarms"      : []
+                    },
+                    "placement"             : {
+                      "execution_target"    : "infra",
+                      "region"              : "iad",
+                      "tenancy"             : "cmurray",
+                      "tennant"             : "927"
+                    }
+                  }
+                ],
+                "ops"               : [
+                  {
+                    "_note"         : "compartment cmurray/927",
+                    "contacts"      : [
+                      {
+                        "enable"    : false,
+                        "name"      : null
+                      }
+                    ],
+                    "contact_groups": [
+                      {
+                        "enable"    : null,
+                        "name"      : null
+                      }
+                    ],
+                    "enable"        : true,
+                    "hosts"         : [
+                      {
+                        "enable"    : false,
+                        "name"      : null
+                      }
+                    ],
+                    "hostgroups"    : [
+                      {
+                        "enable"    : false,
+                        "name"      : null
+                      }
+                    ],
+                    "name"          : {
+                      "display"     : "Compartment - cmurray/927",
+                      "string"      : "compartment-cmurray/927"
+                    },
+                    "use"           : "template-service_compartment"
+                  }
+                ],
+                "type"              : "compartment"
+              },
+              {
+                "_note"             : "927 Boundary VCN",
+                "enable"            : true,
+                "iac"               : [
+                  {
+                    "configuration"     : {
+                      "_note": "927 Boundary VCN",
+                      "compartment": {
+                        "foreign": false,
+                        "label": "927_tenant-network"
+                      },
+                      "byoipv6cidr_details": {
+                        "byoipv6range_id": null,
+                        "ipv6cidr_block": null
+                      },
+                      "cidr_block": "10.0.0.0/29",
+                      "cidr_blocks": [
+                        "10.0.0.0/29"
+                      ],
+                      "defined_tags": {},
+                      "dns_label": "b",
+                      "enable": true,
+                      "freeform_tags": {},
+                      "internet_gateways": [],
+                      "ipv6private_cidr_blocks": [],
+                      "is_ipv6enabled": false,
+                      "is_oracle_gua_allocation_enabled": null,
+                      "label": "927_boundary",
+                      "local_peering_gateways": [
+                        {
+                          "_note": null,
+                          "enable": false,
+                          "label": null,
+                          "name": null,
+                          "peer": {
+                            "foreign": false,
+                            "id": null,
+                            "label": null,
+                            "name": null,
+                            "vcn": {
+                              "id": null,
+                              "label": null
+                            }
+                          },
+                          "prefix": [],
+                          "primary": false,
+                          "route_table": "null",
+                          "suffix": [],
+                          "tags_defined": {},
+                          "tags_freeform": {}
+                        }
+                      ],
+                      "name": "927 Boundary",
+                      "nat_gateways": [],
+                      "network_security_groups": [],
+                      "route_tables": [
+                        {
+                          "_note": null,
+                          "description": null,
+                          "enable": false,
+                          "label": null,
+                          "name": null,
+                          "prefix": [],
+                          "route_rules": [
+                            {
+                              "_note": null,
+                              "description": "",
+                              "destination": {
+                                "_note": null,
+                                "cidr": {
+                                  "subnet": null,
+                                  "prefix": null
+                                },
+                                "foreign": false,
+                                "type": "CIDR_BLOCK"
+                              },
+                              "enable": false,
+                              "target": {
+                                "_note": null,
+                                "foreign": false,
+                                "id": null,
+                                "label": null,
+                                "type": null
+                              }
+                            }
+                          ],
+                          "suffix": []
+                        }
+                      ],
+                      "prefix": [],
+                      "security_lists": [
+                        {
+                          "_note": null,
+                          "defined_tags": [],
+                          "description": null,
+                          "enable": false,
+                          "freeform_tags": {},
+                          "label": null,
+                          "name": null,
+                          "prefix": [],
+                          "security_rules": [
+                            {
+                              "_note": null,
+                              "description": "",
+                              "enable": false,
+                              "rule": {
+                                "_note": null,
+                                "cidr": {
+                                  "subnet": null,
+                                  "prefix": null
+                                },
+                                "enable": null,
+                                "icmp": {
+                                  "_note": "only for icmp/icmpv6",
+                                  "code": null,
+                                  "type": null,
+                                  "version": "4"
+                                },
+                                "label": null,
+                                "port": {
+                                  "_note": "only for tcp/udp",
+                                  "max": null,
+                                  "min": null,
+                                  "source": {
+                                    "_note": "only for source port",
+                                    "max": null,
+                                    "min": null
+                                  }
+                                },
+                                "service_gateway": {
+                                  "_note": "rules for services.  object or all",
+                                  "cidr": null,
+                                  "type": null
+                                },
+                                "protocol": {
+                                  "direction": "ingress",
+                                  "type": "icmp"
+                                },
+                                "stateless": false,
+                                "subnet": {
+                                  "_note": "subnet and vcn must both be specified for lookups",
+                                  "label": null
+                                },
+                                "type": "CIDR_BLOCK",
+                                "vcn": {
+                                  "_note": "subnet and vcn must both be specified for lookups",
+                                  "label": null
+                                }
+                              }
+                            }
+                          ],
+                          "suffix": []
+                        }
+                      ],
+                      "service_gateways": [
+                        {
+                          "_note": null,
+                          "enable": false,
+                          "label": null,
+                          "name": null,
+                          "route_table": {
+                            "foreign": false,
+                            "id": null,
+                            "label": null
+                          },
+                          "service": {
+                            "label": "object"
+                          },
+                          "prefix": [],
+                          "suffix": [],
+                          "tags": {
+                            "defined": {},
+                            "freeform": {}
+                          }
+                        }
+                      ],
+                      "subnets": [
+                        {
+                          "_note": null,
+                          "availability_domain": "",
+                          "cidr": {
+                            "subnet": "10.0.0.0",
+                            "prefix": "29"
+                          },
+                          "compartment": {
+                            "_note": "depricated subnets reside in the same compartment as their vcn",
+                            "id": null,
+                            "label": null
+                          },
+                          "dns_label": null,
+                          "enable": false,
+                          "ipv6cidr_block": null,
+                          "ipv6cidr_blocks": [],
+                          "label": null,
+                          "name": null,
+                          "prohibit": {
+                            "internet_ingress": true,
+                            "public_ip_on_vnic": true
+                          },
+                          "route_table": {
+                            "foreign": false,
+                            "id": null,
+                            "label": null
+                          },
+                          "security_lists": [],
+                          "prefix": [],
+                          "tags_defined": {},
+                          "tags_freeform": {},
+                          "suffix": []
+                        }
+                      ],
+                      "suffix": []
+                    },
+                    "placement"             : {
+                      "execution_target"    : "infra",
+                      "region"              : "iad",
+                      "tenancy"             : "cmurray",
+                      "tennant"             : "927"
+                    }
+                  }
+                ],
+                "ops"               : [],
+                "type"              : "vcn"
+              }
+            ]
+          },
+          {
+            "_note"                 : "Tennant - cmurray/kittay",
+            "enable"                : true,
+            "iac"                   : [
+              {
+                "compartments"        : [
+                  {
+                    "note": "/kittay",
+                    "depth": 1,
+                    "description": "Root compartment for kittay tennant",
+                    "enable": true,
+                    "enable_delete": false,
+                    "name": "kittay",
+                    "label": "kittay-root",
+                    "parent": {
+                      "label": "root",
+                      "foreign": {
+                        "enable": false,
+                        "et": null,
+                        "flock": null,
+                        "phase": null,
+                        "project": null
+                      }
+                    },
+                    "prefix": [],
+                    "suffix": [],
+                    "tags": {
+                      "defined": {},
+                      "freeform": {}
+                    },
+                    "telemetry_alarms": []
+                  }
+                ]
+              }
+            ],
+            "name"                  : "cmurray/kittay",
+            "ops"                       : [
+              {
+                "enable"                : true,
+                "event_handler"         : {
+                  "enable"              : true,
+                  "name"                : null
+                },
+                "icon"                  : {
+                  "coordinates"             : {
+                    "2d"                    : {
+                      "x"                   : null,
+                      "y"                   : null
+                    },
+                    "3d"                    : {
+                      "x"                   : null,
+                      "y"                   : null,
+                      "z"                   : null
+                    }
+                  },
+                  "file"                    : {
+                    "alternate"             : null,
+                    "image"                 : null,
+                    "vrml"                  : null
+                  }
+                },
+                "name"                  : {
+                  "display"             : "Tenant - cmurray/kittay",
+                  "string"              : "tenant-cmurray_kittay"
+                },
+                "parents"               : [
+                  {
+                    "enable"            : "true",
+                    "name"              : "cloud-oci_cmurray"
+                  }
+                ],
+                "use"                   : "template-host_cloud"
+              }
+            ],
+            "provider"              : "oci",
+            "resources"             : []
+          },
+          {
+            "_note"                 : "Tennant - cmurray/rtfm",
+            "enable"                : true,
+            "iac"                   : [],
+            "name"                  : "cmurray/rtfm",
+            "ops"                       : [
+              {
+                "enable"                : true,
+                "event_handler"         : {
+                  "enable"              : true,
+                  "name"                : null
+                },
+                "icon"                  : {
+                  "coordinates"             : {
+                    "2d"                    : {
+                      "x"                   : null,
+                      "y"                   : null
+                    },
+                    "3d"                    : {
+                      "x"                   : null,
+                      "y"                   : null,
+                      "z"                   : null
+                    }
+                  },
+                  "file"                    : {
+                    "alternate"             : null,
+                    "image"                 : null,
+                    "vrml"                  : null
+                  }
+                },
+                "name"                  : {
+                  "display"             : "Tenant - cmurray/rtfm",
+                  "string"              : "tenant-cmurray_rtfm"
+                },
+                "parents"               : [
+                  {
+                    "enable"            : "true",
+                    "name"              : "cloud-oci_cmurray"
+                  }
+                ],
+                "use"                   : "template-host_cloud"
+              }
+            ],
+            "provider"              : "oci",
+            "resources"             : []
+          }
+        ]
+      }
+    ],
+    "printers"                      : [],
+    "routers"                       : [
+      {
+        "_note"                     : "home router",
+        "enable"                    : true,
+        "iac"                       : [],
+        "ops"                       : [            
+          {
+            "action_url"                : null,
+            "address"                   : "192.168.1.250",
+            "check"                     : {
+              "active"                  : null,
+              "command"                 : null,
+              "freshness"               : {
+                "enable"                : false,
+                "threshold"             : null
+              },
+              "initial"                 : null,
+              "interval"                : {
+                "value"                 : 5,
+                "retry"                 : 1
+              },
+              "max_attempts"            : 3,
+              "passive"                 : null,
+              "perfdata"                : null,
+              "period"                  : null
+            },
+            "contacts"                  : [
+              {
+                "enable"                : false,
+                "name"                  : null
+              }
+            ],
+            "contact_groups"            : [
+              {
+                "enable"                : null,
+                "name"                  : null
+              }
+            ],
+            "enable"                    : true,
+            "event_handler"             : {
+              "enable"                  : true,
+              "name"                    : null
+            },
+            "flap_detection"            : {
+              "enable"                  : true,
+              "options"                 : {
+                "down"                  : true,
+                "operational"           : true,
+                "unreachable"           : true
+              },
+              "threshold"               : {
+                "high"                  : null,
+                "low"                   : null
+              }
+            },
+            "hostgroups"                : [
+              {
+                "enable"                : true,
+                "name"                  : "network-routers"
+              }
+            ],
+            "icon"                      : {
+              "coordinates"             : {
+                "2d"                    : {
+                  "x"                   : null,
+                  "y"                   : 2
+                },
+                "3d"                    : {
+                  "x"                   : null,
+                  "y"                   : null,
+                  "z"                   : null
+                }
+              },
+              "initial_state"           : "up",
+              "file"                    : {
+                "alternate"             : null,
+                "image"                 : null,
+                "statusmap"             : null,
+                "vrml"                  : null
+              }
+            },
+            "name"                      : {
+              "string"                   : "router-boundary",
+              "display"                  : "Router - Boundary"
+            },
+            "notes"                     : {
+              "string"                  : null,
+              "url"                     : null
+            },
+            "notification"              : {
+              "enable"                  : true,
+              "first_delay"             : null,
+              "interval"                : 120,
+              "options"                 : {
+                "down"                  : false,
+                "flapping"              : false,
+                "recovery"              : false,
+                "none"                  : false,
+                "scheduled_down"        : false,
+                "unreachable"           : false
+              },
+              "period"                  : "24x7"
+            },
+            "obsess"                    : null,
+            "parents"                   : [
+              {
+                "enable"                : false,
+                "name"                  : null
+              }
+            ],
+            "retain"                    : {
+              "nonstatus"               : true,
+              "status"                  : true
+            },
+            "stalking"                  : {
+              "down"                    : true,
+              "operational"             : true,
+              "up"                      : true
+            },
+            "use"                       : "network-routers"
+          }
+        ],
+        "services"                  : []
+      }
+    ],
+    "servers"                       : [
+      {
+        "enable"                    : true,
+        "iac"                       : [],
+        "ops"                       : [
+          {
+            "action_url"            : null,
+            "address"               : "192.168.1.250",
+            "check"                 : {
+              "active"              : null,
+              "command"             : null,
+              "freshness"           : {
+                "enable"            : false,
+                "threshold"         : null
+              },
+              "initial"             : null,
+              "interval"            : {
+                "value"             : 5,
+                "retry"             : 1
+              },
+              "max_attempts"        : 3,
+              "passive"             : null,
+              "perfdata"            : null,
+              "period"              : null
+            },
+            "contacts"              : [
+              {
+                "enable"            : false,
+                "name"              : null
+              }
+            ],
+            "contact_groups"        : [
+              {
+                "enable"            : null,
+                "name"              : null
+              }
+            ],
+            "event_handler"         : {
+              "enable"              : true,
+              "name"                : null
+            },
+            "flap_detection"        : {
+              "enable"              : true,
+              "options"             : {
+                "down"              : true,
+                "operational"       : true,
+                "unreachable"       : true
+              },
+              "threshold"           : {
+                "high"              : null,
+                "low"               : null
+              }
+            },
+            "hostgroups"            : [
+              {
+                "enable"            : true,
+                "name"              : "servers-linux"
+              }
+            ],
+            "icon"                  : {
+              "coordinates"         : {
+                "2d"                : {
+                  "x"               : null,
+                  "y"               : 2
+                },
+                "3d"                : {
+                  "x"               : null,
+                  "y"               : null,
+                  "z"               : null
+                }
+              },
+              "initial_state"       : "up",
+              "file"                : {
+                "alternate"         : null,
+                "image"             : null,
+                "statusmap"         : null,
+                "vrml"              : null
+              }
+            },
+            "name"                  : {
+              "string"              : "mediaserver",
+              "display"             : "Media Server"
+            },
+            "notes"                 : {
+              "string"              : null,
+              "url"                 : null
+            },
+            "notification"          : {
+              "enable"              : true,
+              "first_delay"         : null,
+              "interval"            : 120,
+              "options"             : {
+                "down"              : false,
+                "flapping"          : false,
+                "recovery"          : false,
+                "none"              : false,
+                "scheduled_down"    : false,
+                "unreachable"       : false
+              },
+              "period"              : "24x7"
+            },
+            "obsess"                : null,
+            "parents"               : [
+              {
+                "enable"            : false,
+                "name"              : null
+              }
+            ],
+            "retain"                : {
+              "nonstatus"           : true,
+              "status"              : true
+            },
+            "stalking"              : {
+              "down"                : true,
+              "operational"         : true,
+              "up"                  : true
+            },
+            "use"                   : "linux-server"
+          }
+        ],
+        "services"                  : []
+      }
+    ],
+    "switches"                      : [],
+    "wireless"                      : []
+  }
+}
+
+
+

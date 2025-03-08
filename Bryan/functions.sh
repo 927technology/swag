@@ -1,13 +1,8 @@
 #!/bin/bash
 
-cmd_echo=/usr/bin/echo
-. ./nopeeking.a
+. ./commands.v
+. ./booleans.v
+. ./functions.f
 
-# hello world function
-say_hello() {
-  local name="$1"
-  ${cmd_echo} Hello, ${name}!
-}
-
-### calling the function 
-say_hello "$1"
+filesystem -fs /dev/sda1
+exit $?
